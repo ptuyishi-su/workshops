@@ -5,7 +5,7 @@ const nav = () => {
     <div>
       <nav className="flex justify-between  px-10 py-5 border-b-2 border-black">
         <div className="font-bold">
-          <p>Workshop</p>
+          <p>Workshops</p>
         </div>
         <div>
           <ul className=" flex justify-between w-[400px]">
