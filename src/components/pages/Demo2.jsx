@@ -1,11 +1,14 @@
 import React from 'react'
 
-const Demo2 = () => {
-  return (
-    <div>
-      <h1>Demo 2</h1>
-    </div>
-  )
-}
+
+const Demo2 = ({ toggle, handleToggleChange }) => {
+  return (      
+    <div className='toggle-container' onClick={handleToggleChange}>
+        <div className={`toggle-btn ${!toggle ? "disable" : ""}`}>
+            {toggle ? "ON" : "OOF"}
+        </div>
+    </div> 
+  );
+};
 
 export default Demo2

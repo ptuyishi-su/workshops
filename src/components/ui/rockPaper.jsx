@@ -4,7 +4,7 @@ const Demo1 = () => {
   const [humanChoice, setHumanChoice] = useState(null);
   const [result, setResult] = useState(null);
 
-  const botChoice = Math.floor(Math.random()*3)  // Assuming the bot's choice is fixed for this example
+  const botChoice = "Paper"; // Assuming the bot's choice is fixed for this example
 
   const gameResults = (humanPlayer, botPlayer) => {
     if (humanPlayer === botPlayer) {
@@ -17,7 +17,7 @@ const Demo1 = () => {
       return "You win";
     } else {
       return "You Lose";
-    } 
+    }
   };
 
   const handleButtonClick = (choice) => {
