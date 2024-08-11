@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BackgroundImage from '/src/assets/biker.jpeg';
 
 const Demo1 = () => {
   const [humanChoice, setHumanChoice] = useState(null);
@@ -28,7 +29,7 @@ const Demo1 = () => {
   return (
     <>
       <div className="">
-        <img className="absolute -z-20 inset-0 h-full w-full object-cover" src="src/assets/images/air.png" alt="Background" />
+      <img className="absolute -z-20 inset-0 h-full w-full object-cover" src={BackgroundImage} alt="Background" />
       </div>
       <div id='container' className="flex flex-row text-white pt-[100px] px-8 justify-between">
         <div className="flex flex-col h-full gap-[150px]">
