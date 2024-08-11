@@ -3,16 +3,15 @@ import React, { useState } from 'react';
 const Demo1 = () => {
   const [humanChoice, setHumanChoice] = useState(null);
   const [result, setResult] = useState(null);
-
-  const botChoice = Math.floor(Math.random()*3)  // Assuming the bot's choice is fixed for this example
+  const choices = ["rock", "paper", "scissors"];
 
   const gameResults = (humanPlayer, botPlayer) => {
     if (humanPlayer === botPlayer) {
       return "DRAW";
     } else if (
-      (humanPlayer === "Rock" && botPlayer === "Scissors") ||
-      (humanPlayer === "Paper" && botPlayer === "Rock") ||
-      (humanPlayer === "Scissors" && botPlayer === "Paper")
+      (humanPlayer === "rock" && botPlayer === "scissors") ||
+      (humanPlayer === "paper" && botPlayer === "rock") ||
+      (humanPlayer === "scissors" && botPlayer === "paper")
     ) {
       return "You win";
     } else {
@@ -21,6 +20,7 @@ const Demo1 = () => {
   };
 
   const handleButtonClick = (choice) => {
+    const botChoice = choices[Math.floor(Math.random() * choices.length)]; // Get the bot's actual choice
     setHumanChoice(choice);
     setResult(gameResults(choice, botChoice));
   };
@@ -34,18 +34,18 @@ const Demo1 = () => {
         <div className="flex flex-col h-full gap-[150px]">
           <div className=" font-extralight w-[260px]">
             <p>
-              Move around your city safely and comfortably, while reducing your carbon footprint and helping to keep the air we breathe clean.
+            I don't play games, but I'll be back... for a rematch.
             </p>
           </div>
           <div>
             <div className="flex flex-row gap-5 font-extralight text-[14px] ">
-              <button className="border-b-2" onClick={() => handleButtonClick("Rock")}>ROCK</button>
-              <button className="border-b-2" onClick={() => handleButtonClick("Paper")}>PAPER</button>
-              <button className="border-b-2" onClick={() => handleButtonClick("Scissors")}>SCISSORS</button>
+              <button className="border-b-2" onClick={() => handleButtonClick("rock")}>ROCK</button>
+              <button className="border-b-2" onClick={() => handleButtonClick("paper")}>PAPER</button>
+              <button className="border-b-2" onClick={() => handleButtonClick("scissors")}>SCISSORS</button>
             </div>
           </div>
           <div className="">
-            <p className="uppercase font-large tracking-widest">Human Victory</p>
+            <p className="uppercase font-large tracking-widest">Human VS Terminator</p>
             <h1 className="text-8xl font-serif">{result}</h1>
           </div>
         </div>

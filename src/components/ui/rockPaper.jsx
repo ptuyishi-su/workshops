@@ -19,7 +19,7 @@ const Demo1 = () => {
       return "You Lose";
     }
   };
-
+d
   const handleButtonClick = (choice) => {
     setHumanChoice(choice);
     setResult(gameResults(choice, botChoice));
